@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="wrapper pt-5">
+       <div class="form d-flex justify-content-center">
+      <form autocomplete="off" id="textForm">
+        <div class="autocomplete">
+          <input
+            class="text-center"
+            id="inputText"
+            type="text"
+            name="myPokemon"
+            placeholder="Pokémon"
+          />
+        </div>
+    
+        <input type="submit" class="btn btn-primary"/>
+      </form>
+    </div> 
+      <div class="image pt-5 d-flex justify-content-center">
+        <img class="img" src="" alt="" srcset="" />
+      </div>
+    </div>
+
+    <script src="./img-searcher.js"></script>
+    <script type="module">
+        import {pokemonList, autocomplete} from "./dropdown.js"
+      autocomplete(document.getElementById("inputText"), pokemonList);
+     </script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
